@@ -17,28 +17,34 @@ function startQuiz() {
     nextQuestion(); 
 }
 function nextQuestion() {
-   var quizDiv = document.getElementById('quiz');
-   for (var i = 0; i < questions.length; i++) {
-       var newQuestion = document.getElementById('question');
-       var newAnswer1 = document.getElementById('answer1btn');
-       var newAnswer2 = document.getElementById('answer2btn');
-       var newAnswer3 = document.getElementById('answer3btn');
-       var newAnswer4 = document.getElementById('answer4btn');
-    
-       newQuestion.innerHTML = questions[i].question;
-       newAnswer1.innerHTML = questions[i].answer1;
-       newAnswer2.innerHTML = questions[i].answer2;
-       newAnswer3.innerHTML = questions[i].answer3;
-       newAnswer4.innerHTML = questions[i].answer4;
-    }
+    var quizDiv = document.getElementById('quiz');
+    var i = getCurrentQuestion(); 
+    var newQuestion = document.getElementById('question');
+    var newAnswer1 = document.getElementById('answer1btn');
+    var newAnswer2 = document.getElementById('answer2btn');
+    var newAnswer3 = document.getElementById('answer3btn');
+    var newAnswer4 = document.getElementById('answer4btn');
 
+    newQuestion.innerHTML = questions[i].question;
+    newAnswer1.innerHTML = questions[i].answer1;
+    newAnswer2.innerHTML = questions[i].answer2;
+    newAnswer3.innerHTML = questions[i].answer3;
+    newAnswer4.innerHTML = questions[i].answer4;
+
+    setCurrentQuestion();
 }
-function getCurrentQuestion(){
+function getCurrentQuestion() {
     return currentQuestion;
 
 }
 function setCurrentQuestion() {
-    currentQuestion++;
+    if(currentQuestion < questions.length) {
+        currentQuestion++;
+    }
+}
+function checkAnswer() {
+    var i = getCurrentQuestion();
+    if(questions[i].correctAnswer == )
 }
 
 // for (var i = 0; i < questions.length; i++) {
@@ -55,7 +61,7 @@ var questions = [
         answer3: 'integers',
         answer4: 'all of the above',
         question: 'arrays in JavaScript can store what kinds of values?',
-        correctAnswer: 4
+        correctAnswer: "answer4btn"
     },
     {
         answer1: 'script',
