@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="./assests/css/styles.css"> 
+    <title>TimedQuiz</title>
+</head>
+<body>
+    <header class="main-header">
+        <!-- <h1> Javascript Trivia</h1> -->
+        <nav> 
+            <a src="#"> Games by James</a>
+            <p id="safeTimerDisplay">60</p>
+        </nav>
+    </header>
+    <section class="Container">
+        <button id="start_btn" type="button" onclick="timer(); startQuiz();"> Start Quiz</button> 
+        <div id="quiz" style="display: none;" class="quiz">
+            <p id="question" class="question">question1</p>
+            <button id="answer1btn" class="answer1btn" onclick="">answer1</button>
+            <br>
+            <button id="answer2btn" class="answer2btn" onclick="">answer2</button>
+            <br>
+            <button id="answer3btn" class="answer3btn" onclick="">answer3</button>
+            <br>
+            <button id="answer4btn" class="answer4btn" onclick="">answer4</button>
+        
+        </div>
+    </section>
+    <script src="./assests/script/script.js"></script>
+</body>
+</html>
