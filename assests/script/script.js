@@ -1,3 +1,4 @@
+var currentQuestion = 0;
 
 
 function timer(){
@@ -12,10 +13,10 @@ function timer(){
 }
 function startQuiz() {
     document.getElementById('start_btn').style.display = "none";
-    runQuiz(); 
     document.getElementById('quiz').style.display = "block";
+    nextQuestion(); 
 }
-function runQuiz() {
+function nextQuestion() {
    var quizDiv = document.getElementById('quiz');
    for (var i = 0; i < questions.length; i++) {
        var newQuestion = document.getElementById('question');
@@ -29,9 +30,15 @@ function runQuiz() {
        newAnswer2.innerHTML = questions[i].answer2;
        newAnswer3.innerHTML = questions[i].answer3;
        newAnswer4.innerHTML = questions[i].answer4;
-       
     }
 
+}
+function getCurrentQuestion(){
+    return currentQuestion;
+
+}
+function setCurrentQuestion() {
+    currentQuestion++;
 }
 
 // for (var i = 0; i < questions.length; i++) {
