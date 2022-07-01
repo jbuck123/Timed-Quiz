@@ -48,6 +48,7 @@ function setCurrentQuestion() {
         currentQuestion = -1;
     }
 }
+// this function checks if the answer is correct and if it is answer incorrect than it subtracts 5 seconds 
 function checkAnswer(answerId) {
     
 
@@ -58,20 +59,13 @@ function checkAnswer(answerId) {
         console.log('correctAnswer ' + answerId);
     }
     else {
-        sec-=5;
+        sec-=10;
         console.log("wrong " + answerId);
     }
     setCurrentQuestion();
     nextQuestion();
 }
-
-// for (var i = 0; i < questions.length; i++) {
-//     var newEl = document.createElement('p');
-
-//     newEl.innerText = questions[i].question;
-
-//     wrapperEl.append(newEl);
-
+// an array of objects that are the questions and answers.
 var questions = [
     {
         answer1: 'boolean',
@@ -105,6 +99,55 @@ var questions = [
         question: 'How to write an IF statement in JavaScript?',
         correctAnswer: 'answer4btn'
     },
+    {
+        answer1: 'using args.length property',
+        answer2: 'using arguments.length property',
+        answer3: 'both of the above',
+        answer4:  'both of the above',
+        question: 'how can you ge the total number of arguemnts passed to a function?',
+        correctAnswer: 'answer2btn'
+    },
+    {
+        answer1: 'add()',
+        answer2: 'append()',
+        answer3: "merge()",
+        answer4:  'concat()',
+        question: "Which of the following function of string object combines the text of two strings and returns a new string?",
+        correctAnswer: 'answer4btn'
+    },
+    {
+        answer1: 'link()',
+        answer2: 'script()',
+        answer3: "sub()",
+        answer4:  'href()',
+        question: 'Which of the following function of string object creates an HTML hypertext link that request another URL?',
+        correctAnswer: 'answer1btn'
+    },
+    {
+        answer1: 'reverse()',
+        answer2: 'shift()',
+        answer3: 'slice()',
+        answer4:  'some()',
+        question: 'which of the following function of array object removes the first element from an array and returns that element?',
+        correctAnswer: 'answer2btn'
+    },
+    {
+        answer1: 'function cookie(){}' ,
+        answer2: 'hello cookie',
+        answer3: 'i = 0; i < cookie.length; i++',
+        answer4:  'cookie()',
+        question: "how do you call a function called 'cookie' in JavaScript?",
+        correctAnswer: 'answer4btn'
+    },
+    {
+        answer1:'.java',
+        answer2:'.css',
+        answer3: '.html',
+        answer4:  '.js',
+        question: 'JavaScript file has an Extension of:',
+        correctAnswer:'answer4btn'
+    }
+
 
 ]
 
