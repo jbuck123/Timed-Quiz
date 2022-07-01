@@ -7,19 +7,46 @@
 /* HEADER SECTION */
 
 .main-header{
-    display: inline-flexbox;
+    display: flex;
     justify-content: space-between; 
     align-items: center;
     padding: 30px 10%; 
-    background: whitesmoke;
+    background: #444;
 }
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #333;
 }
 #safeTimerDisplay{
     display: inline-block;
-    padding: 20px;
- 
-   
-    
+    padding: 20px;  
 }
+.Container {
+    width: 900px;
+    height: 300px;
+    border: 1px solid #ff8899;
+    position:fixed;
+    left: 50%;
+  
+   
+}
+
+#start_btn {
+   width: 900px;
+   height: 300px;
+   border: 1px solid #ff8899;
+   position: fixed;
+   left: 50%;
+
+  
+}
+.quiz {
+    text-align: center;
+    margin-top: 50px;
+
+}
+#question{
+    color: whitesmoke;
+
+}
+
