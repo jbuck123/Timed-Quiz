@@ -65,6 +65,11 @@ function checkAnswer(answerId) {
     setCurrentQuestion();
     nextQuestion();
 }
+
+// ending the quiz and alerting the user that a highscores screen will be coming soon.
+if(questions[i] = questions[i].length || currentQuestion === -1) {
+  alert('high-score page coming soon :)');
+}
 // an array of objects that are the questions and answers.
 var questions = [
     {
